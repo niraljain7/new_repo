@@ -76,9 +76,9 @@
         <tr>
           <th>ID</th>
           <th>Timestamp</th>
-          <th>Holder</th>
-          <th>Catch Location <br>(Longitude, Latitude)</th>
-          <th>Vessel</th>
+          <th>Guard</th>
+          <th>Locations <br>(Longitude, Latitude)</th>
+          <th>Successful/Unsuccessful</th>
         </tr>
 
         <tr ng-repeat="tuna in all_tuna">
@@ -91,7 +91,7 @@
       </table>
 
       <div class="form-group">
-        <label>Query a Specific Tuna Catch</label><br>
+        <label>Query a Specific Guard</label><br>
         <h5 style="color:red;margin-bottom:2%" id="error_query">Error: Please enter a valid Tuna Id</h5>
         
         Enter a catch number: <input id="createName" class="form-control" type="text" placeholder="Ex: 3" ng-model="tuna_id">
@@ -102,9 +102,9 @@
 
         <tr>
           <th>Timestamp</th>
-          <th>Holder</th>
-          <th>Catch Location <br>(Longitude, Latitude)</th>
-          <th>Vessel</th>
+          <th>Guard</th>
+          <th>Locations<br>(Longitude, Latitude)</th>
+          <th>Successful/Unsuccessful</th>
         </tr>
 
         <tr>
@@ -119,12 +119,12 @@
         <label>Create Patrol Record</label>
         <h5 style="color:green;margin-bottom:2%" id="success_create">Success! Tx ID: {{create_tuna}}</h5>
         <br>
-        Enter catch id: <input class="form-control" type="text" placeholder="Ex: 11" ng-model="tuna.id">
-        Enter name of vessel: <input class="form-control" type="text" placeholder="Ex: 0239L" ng-model="tuna.vessel">
+        Enter guard id: <input class="form-control" type="text" placeholder="Ex: 11" ng-model="tuna.id">
+        Enter Locations: <input class="form-control" type="text" placeholder="Ex: 0239L" ng-model="tuna.vessel">
         Enter longitude: <input id="createName" class="form-control" type="text" placeholder="Ex: 28.012" ng-model="tuna.longitude"> 
         Enter latitude: <input id="createName" class="form-control" type="text" placeholder="Ex: 150.405" ng-model="tuna.latitude">
         Enter timestamp: <input class="form-control" type="text" placeholder="Ex: 4982342301" ng-model="tuna.timestamp">
-        Enter name of holder: <input class="form-control" type="text" placeholder="Ex: Hansel" ng-model="tuna.holder">
+        Enter name of guard: <input class="form-control" type="text" placeholder="Ex: Hansel" ng-model="tuna.holder">
         <input id="createSubmit" type="submit" value="Create" class="btn btn-primary" ng-click="recordTuna()"> 
       </div>
 
